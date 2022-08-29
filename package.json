@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "aws-sdk": "^2.1192.0",
+    "dotenv-flow": "^3.2.0",
+    "lambda-local": "^2.0.2",
+    "sheetjs-style": "^0.15.8",
+    "xlsx": "^0.18.5"
+  }
+}

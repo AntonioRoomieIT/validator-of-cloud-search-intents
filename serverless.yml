@@ -1,0 +1,19 @@
+service: validator-of-cloud-serach-intent
+provider:
+  name: aws
+  runtime: nodejs16.x
+  stage: dev
+  region: us-east-1
+  timeout: 15
+  environment:
+    AUTH_USER: '0bFtpiOrE9sdITnbMoU1Ewn5KVUst77d'
+    AUTH_PASS: 'aPXmChhO1O7OtnTc'
+    DEBUG: '*'
+    BOT_ALIAS_ID: "TSTALIASID"
+    BOT_ID: "O0JYV5P9EY"
+    LOCALE_ID: "es_419"
+functions:
+  app:
+    handler: lambda/custom/index.handler
+    events:
+      - http: POST /
