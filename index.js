@@ -1,11 +1,7 @@
 const AWS = require('aws-sdk');
 const { LexRuntimeV2, DeleteSessionCommand, StartConversationCommand, RecognizeTextCommand } = require("@aws-sdk/client-lex-runtime-v2");
 const config = require('./config.js')
-
-
-
 exports.handler = async (event) => {
-
   if (event.type > 0 && event.intentName != null && event.response != null && Object.keys(event.utterace).length > 0) {
     if (event.type == 1) {
       const session_id = getRandomSessionID();
@@ -45,12 +41,22 @@ exports.handler = async (event) => {
       return{status:500,error:"Por ahora solo existe type=1"};  
     }
   }else{
-      return{status:500,error:"Type debe ser 1 o mayor, intentName no debe ser nullo, Response no debe ser nullo y Debes agregar por lo menos 1 utterance en forma de array."}; 
-  }
+      // return{status:500,error:"Type debe ser 1 o mayor, intentName no debe ser nullo, Response no debe ser nullo y Debes agregar por lo menos 1 utterance en forma de array."}; 
+      if(event.intentName == null){
+        return{status:500,error:"Intent name no debe ser null"}; 
+      }
+      if(event.response == null){
+        return{status:500,error:"Response no debe ser null"}; 
+      }
+      if(event.type <1){
+        return{status:500,error:"Type debe ser 1 o mayor"}; 
+      }
+
+      if(Object.keys(event.utterace).length < 1){
+        return{status:500,error:"Debe existir por lo menos 1 utterance"}; 
+      }
+    }
 }
-
-
-
 
 const getRandomSessionID = () => {
   let base_numers = 99388815565;
