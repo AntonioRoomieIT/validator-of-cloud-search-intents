@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@aws-sdk/client-lex-runtime-v2": "^3.161.0",
     "aws-sdk": "^2.1192.0",
     "dotenv-flow": "^3.2.0",
     "lambda-local": "^2.0.2",

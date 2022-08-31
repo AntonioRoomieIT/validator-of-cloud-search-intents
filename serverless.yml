@@ -8,6 +8,8 @@ provider:
   environment:
     AUTH_USER: '0bFtpiOrE9sdITnbMoU1Ewn5KVUst77d'
     AUTH_PASS: 'aPXmChhO1O7OtnTc'
+    AWS_ACCESS_KEY_IDD: 'AKIA6O2CZXAF6PZPILFK'
+    AWS_SECRET_ACCESS_KEYY: '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'
     DEBUG: '*'
     BOT_ALIAS_ID: "TSTALIASID"
     BOT_ID: "O0JYV5P9EY"

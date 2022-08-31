@@ -13,7 +13,8 @@ var jsonPayload = {
         'ke son sus komisiones',
         'ke signifika komision',
         'ke es la komision',
-        'a ke se Refieren en kuanto a komision'
+        'a ke se Refieren en kuanto a komision',
+        'Mi dinero esta seguro en profuturo'
     ],
     response: 'Es el valor porcentual que se cobra por la administración e inversión de los recursos de los trabajadores.'
 };
